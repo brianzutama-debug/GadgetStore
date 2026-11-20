@@ -68,7 +68,7 @@ public function index(Request $request)
     'price' => ['required','numeric','min:0'],
     'stock' => ['required','integer','min:0'],
     'description' => ['nullable','string','max:2000'],
-    'image' => ['nullable','image','mimes:jpg,jpeg,png,webp,max:5048'],
+    'image' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:5120'],
     ]);
 
     if($request->hasFile('image')) {
